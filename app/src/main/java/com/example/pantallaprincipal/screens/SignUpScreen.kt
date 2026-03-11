@@ -211,7 +211,8 @@ fun SignUpScreen(navController: NavController){
                                 fontSize = 18.sp)
                         }
                         Button( onClick = {},
-                            enabled = !nameError && !name.isBlank() && !emailError && phoneError &&
+                            enabled = !nameError && !name.isNotEmpty() && !emailError && email.isNotEmpty()
+                                    && phoneError && phone.isNotEmpty() && password.isNotEmpty() &&
                                         !confirmPasswordError && checked,
                             modifier = Modifier.size(width = 125.dp, height = 50.dp),
                             colors = ButtonDefaults.buttonColors(Color(0xff4f4ab1)),
